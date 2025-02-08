@@ -10,6 +10,7 @@ namespace BookStore.DataAccess.Repository.IRepository
     {
         // creating global save method as it is same for all the repositories
         ICategoryRespository Category { get; }
+        IProductRespository Product { get; }
         void Save();
     }
 }
