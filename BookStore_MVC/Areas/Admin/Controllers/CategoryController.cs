@@ -5,8 +5,9 @@ using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookStore_MVC.Controllers
+namespace BookStore_MVC.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         //private readonly ApplicationDbContext _db;
@@ -129,5 +130,5 @@ namespace BookStore_MVC.Controllers
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index", "Category");
         }
-    } 
+    }
 }
